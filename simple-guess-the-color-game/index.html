@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Guess the color game</title>
+</head>
+<body>
+    <div class="content">
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        <a href="#">logo</a>
+                    </div>
+                    <div class="navBar">
+                        <ul>
+                            <li><a href="#" class="active">Home</a></li>
+                            <li><a href="#">Ranking</a></li>
+                            <li><a href="#">Info</a></li>
+                            <li><a href="#">misc</a></li>
+                        </ul>
+                </div>
+            </div>
+        </header>
+        <div class="gameScreen">
+            <h1>Guess the color</h1>
+            <div class="randomColor"> </div>
+            <div class="colorPicker">
+                R: <input class="colorSlider" type="range" id="ColorPicker_Red" min="0" max="255"> 
+                G: <input class="colorSlider" type="range" id="ColorPicker_Green" min="0" max="255"> 
+                B: <input class="colorSlider" type="range" id="ColorPicker_Blue" min="0" max="255"> 
+                <br>
+                <button class="submitColors" onclick="getPickedColor()">Submit</button>
+            </div>
+            <div id="pickedColor"></div>
+        </div>
+    </div>
+</body>
+</html>

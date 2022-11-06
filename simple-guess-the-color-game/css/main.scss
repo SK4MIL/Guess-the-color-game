@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    body{
+        font-family: Arial;
+        background-color: rgb(159, 188, 214);
+        .content{
+            .header{
+                background-color: black;
+                width: 100vw;
+                min-height: 2vh;
+                padding: 0.6vh;
+                margin: auto;
+                .container .row{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin-left: 0.5vw;
+                    margin-right: 0.5vw;
+                    .logo{
+                        padding: 0.2em;
+                        background-color: red;
+                        a{
+                            text-decoration: none;
+                        }
+                    }
+                    .navBar{
+                        background-color: green;
+                        justify-content: space-between;
+                        text-decoration: none;
+                        ul{
+                            list-style: none;
+                            li{
+                                padding: 0.2em;
+                                color: black;
+                                display: inline;
+                                a{
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .gameScreen{
+                display: flex;
+                padding: auto;
+                margin: auto;
+                flex-direction: column;
+                justify-content: start;
+                width: 70vw;
+                height: 100vh;
+
+                .randomColor{
+                    border-style: solid;
+                    border-color: black;
+                    border-width: 2px;
+                    height: 15vh;
+                    background-color:red;
+                    margin-bottom: 2em;
+                } 
+                
+                .colorPicker{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    border-style: solid;
+                    border-color: red;
+                    border-width: 2px;
+                    padding: 1em;
+                    .colorSlider{
+                        border-radius: 0.6em;
+                    }
+                }
+                #pickedColor{
+                    margin-top: 2em;
+                    border-style: solid;
+                    border-color: black;
+                    border-width: 2px;
+                    height: 15vh;
+                }
+            }
+        }
+    }
+}
