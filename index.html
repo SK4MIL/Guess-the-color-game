@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <script src="scripts/main.js"></script>
+    <script src="scripts/Colour.js"></script>
+    <script src="https://scrtwpns.com/mixbox.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Guess the color game</title>
+</head>
+<body onload="startTheGame()">
+    <div class="content">
+
+        <header class="header">
+            <div class="container">
+                <h1>Guess the color!</h1>
+            </div>
+        </header>
+
+        <div class="gameScreen">
+            <div class="colorMixingWindow">
+                <div id="firstRandomColor" class="randomColor"></div>
+                +
+                <div id="secondRandomColor" class="randomColor"></div>
+                =
+                <div id="mixedColor"></div>
+             </div>
+            <div class="colorPicker">
+                <div class="picker">
+                    <div class="Slider">
+                        R: 
+                        <input class="colorSlider" type="range" id="ColorPicker_Red" min="0" max="255" onchange="getPickedColor()" oninput="this.nextElementSibling.value = this.value">
+                        <output id="redValue" class="outputValue">128</output> 
+                    </div>
+                    <div class="Slider">
+                        G: 
+                        <input class="colorSlider" type="range" id="ColorPicker_Green" min="0" max="255" onchange="getPickedColor()" oninput="this.nextElementSibling.value = this.value">
+                        <output id="greenValue" class="outputValue">128</output> 
+                    </div>
+                    <div class="Slider">
+                        B: 
+                        <input class="colorSlider" type="range" id="ColorPicker_Blue" min="0" max="255" onchange="getPickedColor()" oninput="this.nextElementSibling.value = this.value">
+                        <output id="blueValue" class="outputValue">128</output> 
+                    </div>
+                    <button type="submit" class="submitButton" onclick="onSubmitButtonClicked()">Submit</button>
+                </div>
+                <div id="pickedColor"></div>
+            </div>
+        </div>
+    </div>
+    <dialog class="modal" id="submitModal">
+        <h2 id="resultsMessage"></h2>
+        <div class="buttonDiv">
+            <button id="playAgain" onclick="startTheGame()">Play Again</button>
+            <button id="share">Share result</button>
+        </div>
+    </dialog>
+</body>
+</html>

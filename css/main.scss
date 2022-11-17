@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial;
+        background-color: rgb(159, 188, 214);
+
+        .content {
+            .header {
+                background-color: black;
+                width: 100vw;
+                min-height: 2vh;
+                padding: 0.6vh;
+                margin: auto;
+
+                .container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-left: 0.5vw;
+                    margin-right: 0.5vw;
+                    color: white;
+                }
+            }
+
+            .gameScreen {
+                display: flex;
+                padding: auto;
+                margin: auto;
+                flex-direction: column;
+                justify-content: start;
+                align-items: center;
+                width: 70vw;
+                height: 100vh;
+
+                .colorMixingWindow {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-style: solid;
+                    border-color: black;
+                    border-width: 2px;
+                    font-weight: bold;
+                    font-size: xx-large;
+                    height: 15vh;
+                    width: 70vw;
+                    margin: auto;
+                    margin-bottom: 1em;
+                    margin-top: 0.2em;
+
+                    .randomColor {
+                        border-style: solid;
+                        border-color: black;
+                        border-width: 2px;
+                        width: 13vh;
+                        height: 13vh;
+                        margin: auto;
+                    }
+
+                    #mixedColor {
+                        border-style: solid;
+                        border-color: rgb(58, 20, 20);
+                        border-width: 2px;
+                        width: 13vh;
+                        height: 13vh;
+                        background-size: 13vh 13vh;
+                        background-color: rgb(255, 255, 255);
+                        background-image: url("../images/Question_mark.png");
+                        margin: auto;
+                    }
+                }
+
+                .colorPicker {
+                    display: flex;
+                    width: 70vw;
+                    align-items: center;
+                    justify-content: space-between;
+                    border-style: solid;
+                    border-color: red;
+                    border-width: 2px;
+                    padding: 1em;
+
+                    .picker {
+                        .slider {
+                            padding: auto;
+                            margin: auto;
+                        }
+
+                        .submitButton {
+                            padding: 10px;
+                            width: 20vw;
+                            border: none;
+                            outline: none;
+                            font-size: 24px;
+                            font-weight: 500;
+                            border-radius: 30px;
+                        }
+
+                    }
+
+                    #pickedColor {
+                        flex-grow: 1;
+                        border-style: solid;
+                        border-color: black;
+                        border-width: 2px;
+                        min-width: 13vh;
+                        min-height: 13vh;
+                        padding: auto;
+                        margin: 0.2em;
+                    }
+                }
+            }
+        }
+
+        .modal {
+            padding: 1em;
+            max-width: 50vw;
+            max-height: 70vh;
+            margin: auto;
+
+            .buttonDiv {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
